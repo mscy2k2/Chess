@@ -13,6 +13,7 @@ public class ChessBoard {
           int columnTo;
           
 	      // Initialize Grid Contents array
+   public void initializeGrid() {    
 	      gridContents[0][0] = 'R';     // ROOK
 	      gridContents[0][1] = 'N';     // KNIGHT
 	      gridContents[0][2] = 'B';     // BISHOP
@@ -50,8 +51,9 @@ public class ChessBoard {
 	      gridContents[7][5] = 'B'; 
 	      gridContents[7][6] = 'N'; 
 	      gridContents[7][7] = 'R'; 
-	      
+   }   
 	      //Printing the grid contents. 
+   public void displayGrid() {
 	      for (int i = 0; i < gridContents.length; ++i) {
 	         for (int j = 0; j < gridContents[0].length; ++j) {
 	            System.out.print(gridContents[i][j] + " ");
@@ -60,6 +62,7 @@ public class ChessBoard {
 	      }
 	      
 	      System.out.println();
+   }
 	      
 	      System.out.print("Enter the row and column of the piece to move respectively(Ex: 1 2): ");
 	      rowMove = scnr.nextInt();
@@ -74,7 +77,8 @@ public class ChessBoard {
 	      
 	      System.out.println();
 	      
-	      //Proceed to update the grid (2D array) and then print the updated array. 
+	      //Proceed to update the grid (2D array) and then print the updated array.
+      public void updateGrid() {
 	      if ((rowMove >= 0) && (rowMove <= 7) && (columnMove >= 0) && (columnMove <= 7) && (rowTo >= 0) && (rowTo <= 7) && (columnTo >= 0) && (columnTo <= 7)) {
 	         if ((rowTo >= 2) && (rowTo <= 5)) { 
 	    	    for (int i = 0; i < gridContents.length; ++i) {
@@ -89,8 +93,8 @@ public class ChessBoard {
 	      }
 	      else
 	    	  System.out.println("Either the row or column entered or both is less than zero or greater than 7");
+      }
    }
-
 }
 
 		      
