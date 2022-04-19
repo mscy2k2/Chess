@@ -1,6 +1,4 @@
 
-import java.util.Scanner;
-
 /* A program to store a chess board information.
  Program utilizeS a string 2D array to store positions of chess pieces. The grid size is 8 X 8. */
 public class ChessBoard {
