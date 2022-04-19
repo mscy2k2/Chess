@@ -11,7 +11,7 @@ public class ChessBoard {
       int columnTo;    
       
    // Initialize Grid Contents array
-   public void initializeGrid() {
+   public void initializeGridContents() {
       gridContents[0][0] = 'R';     // ROOK
       gridContents[0][1] = 'N';     // KNIGHT
       gridContents[0][2] = 'B';     // BISHOP
@@ -53,7 +53,7 @@ public class ChessBoard {
    } 
       
     //Printing the grid contents. 
-      public void displayGrid() {	 
+      public void displayGridContents() {	 
          for (int i = 0; i < gridContents.length; ++i) {
     	    for (int j = 0; j < gridContents[0].length; ++j) {
     	       System.out.print(gridContents[i][j] + " ");
@@ -66,7 +66,7 @@ public class ChessBoard {
       }
       
       //Proceed to update the grid (2D array) and then print the updated array.
-      public void updateGrid() {
+      public void updateGridContents() {
 	      if ((rowMove >= 0) && (rowMove <= 7) && (columnMove >= 0) && (columnMove <= 7) && (rowTo >= 0) && (rowTo <= 7) && (columnTo >= 0) && (columnTo <= 7)) {
 	         if ((rowTo >= 2) && (rowTo <= 5)) { 
 	    	    for (int i = 0; i < gridContents.length; ++i) {

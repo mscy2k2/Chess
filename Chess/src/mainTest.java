@@ -10,8 +10,8 @@ public class mainTest {
 		int columnMove;
 		int rowTo;
 		int columnTo;
-		chess.initializeGrid();
-		chess.displayGrid();
+		chess.initializeGridContents();
+		chess.displayGridContents();
 		
 		System.out.print("Enter the row and column of the piece to move respectively(Ex: 1 2): ");
 		rowMove = scnr.nextInt();
@@ -26,7 +26,7 @@ public class mainTest {
 
 		System.out.println();
 
-		chess.updateGrid();
+		chess.updateGridContents();
 	}
 
 }
